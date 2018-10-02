@@ -17,7 +17,6 @@
     "co-fs": "latest",
     "co-redis": "^1.2.1",
     "co-request": "~0",
-    "dtcommon": "file:dtcommon",
     "koa": "~0",
     "koa-better-body": "~1",
     "koa-compose": "2.3.0",

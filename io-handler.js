@@ -1,11 +1,10 @@
 'use strict';
 
-module.exports = function (io) {
+module.exports = function (io, cs) {
   io.on( 'connection', ctx => {
+    //for any join event the connection emits the latest quque to the specific joinee
     console.log( 'Join event', ctx.socket.id )
-    io.broadcast( 'connections', {
-      numConnections: io.connections.size
-    });
+    ctx.socket.emit( 'bulklines', (function () {var str = ""; cs.getQueue().forEach((k)=>{str+="<br>"+k+"<br>";});return str;})());
   })
 
   io.on( 'disconnect', ctx => {

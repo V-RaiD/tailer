@@ -11,9 +11,13 @@
             socket.on('connect', () => {
                 console.log('connected');
             });
-            socket.on('newLine', (data) => {
+            socket.on('bulklines', (data) => {
                 console.log(`new data: ${data}`);
                 $("#tailing").empty();
+                $("#tailing").append(data);
+            });
+            socket.on('newLine', (data) => {
+                console.log(`new data: ${data}`);
                 $("#tailing").append(data);
             });
             $('#tail').click(() => {
