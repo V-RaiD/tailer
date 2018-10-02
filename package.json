@@ -23,15 +23,9 @@
     "koa-compress": "~1",
     "koa-cors": "0.0.16",
     "koa-generic-session": "latest",
-    "koa-jwt": "~1.2.0",
-    "koa-logger": "~1",
-    "koa-passport": "latest",
     "koa-response-time": "latest",
-    "koa-router": "5.2.3",
     "koa-send": "~1",
-    "koa-session-mongoose": "latest",
     "koa-socket": "^4.4.0",
-    "lodash": "~3",
     "socket.io-client": "^2.1.1"
   }
 }
